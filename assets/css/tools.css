@@ -1,0 +1,506 @@
+/* ==========================================================================
+   UNG MAN (UNGMAN.SE) – INTERACTIVE TOOLS CSS
+   Styles for Livshjulet, Budgetkalkylator, Fokusklocka & Checklistor
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOOL CONTAINER & WRAPPER
+   -------------------------------------------------------------------------- */
+.tool-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .tool-box {
+    padding: 48px;
+  }
+}
+
+.tool-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 24px;
+}
+
+.tool-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  margin-bottom: 8px;
+}
+
+.tool-intro {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. LIVSHJULET (THE WHEEL OF LIFE FOR YOUNG MEN)
+   -------------------------------------------------------------------------- */
+.livshjul-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .livshjul-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.wheel-sliders-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slider-group {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  transition: border-color var(--transition-fast);
+}
+
+.slider-group:hover {
+  border-color: var(--border-medium);
+}
+
+.slider-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.slider-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider-val-badge {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  background: var(--bg-dark);
+  color: #ffffff;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.styled-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  background: #dcded9;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+
+.styled-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+}
+
+/* Wheel Visual Area */
+.wheel-visual-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wheel-chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 24px auto;
+}
+
+.wheel-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.wheel-results-card {
+  width: 100%;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: left;
+}
+
+.wheel-score-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.wheel-score-number {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.wheel-insight-text {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. BUDGETKALKYLATOR FÖR UNGA (15-18 ÅR)
+   -------------------------------------------------------------------------- */
+.budget-calc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+@media (min-width: 992px) {
+  .budget-calc-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.budget-inputs-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.budget-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.budget-input-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .budget-input-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.budget-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.budget-field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.budget-field .input-addon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.budget-field input {
+  width: 100%;
+  padding: 12px 48px 12px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  outline: none;
+  background: #ffffff;
+}
+
+.budget-field input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(224, 83, 38, 0.12);
+}
+
+.budget-field .currency-addon {
+  position: absolute;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Budget Summary Column */
+.budget-summary-col {
+  background: var(--bg-dark);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+}
+
+.budget-summary-header {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.budget-stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+}
+
+.budget-stat-item.total {
+  border-bottom: none;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.budget-stat-val {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.budget-stat-val.positive {
+  color: #34d399;
+}
+
+.budget-stat-val.negative {
+  color: #f87171;
+}
+
+.budget-total-big {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  margin: 12px 0 20px 0;
+}
+
+.savings-target-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-top: auto;
+}
+
+.savings-target-box h5 {
+  font-size: 0.88rem;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.savings-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.savings-progress-fill {
+  height: 100%;
+  background: var(--accent-emerald);
+  width: 35%;
+  transition: width 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   4. FOKUSKLOCKAN (POMODORO STUDIETIMER)
+   -------------------------------------------------------------------------- */
+.pomodoro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.pomodoro-mode-switch {
+  display: flex;
+  gap: 8px;
+  background: var(--bg-subtle);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 32px;
+}
+
+.mode-pill-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.mode-pill-btn.active {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-xs);
+}
+
+.pomodoro-dial {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 8px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.pomodoro-time-display {
+  font-family: var(--font-mono);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.pomodoro-status-lbl {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+}
+
+.pomodoro-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   5. INTERAKTIV CHECKLISTA (KÖRKORT & VUXENLIVET)
+   -------------------------------------------------------------------------- */
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checklist-item {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.checklist-item:hover {
+  background: #ffffff;
+  border-color: var(--border-medium);
+}
+
+.checklist-item.completed {
+  background: #f8fafc;
+  opacity: 0.75;
+}
+
+.checklist-item.completed .item-label {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.checklist-checkbox {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--accent-emerald);
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.checklist-content {
+  flex-grow: 1;
+}
+
+.item-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+  display: block;
+}
+
+.item-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+.checklist-progress-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.checklist-progress-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+}

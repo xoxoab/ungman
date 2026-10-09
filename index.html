@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNG MAN – Du behöver inte ha alla svar | Digital plattform för unga män 15–18 år</title>
+  <meta name="description" content="Svensk plattform för unga män 15–18 år. Livskunskap, hälsa, träning, AI & tech, entreprenörskap, relationer och interaktiva verktyg för framtiden.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e1117'/><text y='65' x='50' font-size='50' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='bold'>UM</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/tools.css">
+</head>
+<body>
+
+  <!-- 1. TRYGGHET & SNABBEXIT TOPBAR -->
+  <div class="safety-topbar">
+    <div class="container">
+      <div class="safety-topbar-info">
+        <span class="safety-pill">Akut samtalsstöd</span>
+        <span>Behöver du prata anonymt? Ring BRIS på <strong>116 111</strong> (öppet dygnet runt) eller besök <a href="https://www.umo.se" target="_blank" rel="noopener" class="safety-link">UMO.se</a>.</span>
+      </div>
+      <div>
+        <button class="quick-exit-btn" title="Lämna sidan omedelbart och gå till väderprognos (Esc 3 ggr)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          Lämna sidan snabbt
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. HUVUDHEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" aria-label="UNG MAN Startsida">
+          <div class="brand-symbol">UM</div>
+          <div class="brand-text">
+            <span class="brand-name">UNG MAN</span>
+            <span class="brand-tagline">Du behöver inte ha alla svar</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop" aria-label="Huvudmeny">
+          <a href="livskunskap.html" class="nav-link">Livskunskap</a>
+          <a href="halsa.html" class="nav-link">Hälsa & Träning</a>
+          <a href="tech-framtid.html" class="nav-link">Tech & AI</a>
+          <a href="skapa-starta.html" class="nav-link">Skapa & Starta</a>
+          <a href="verktyg.html" class="nav-link">Verktyg</a>
+          <a href="artiklar.html" class="nav-link">Artiklar</a>
+          <a href="stod-trygghet.html" class="nav-link" style="color: var(--accent-primary);">Stöd & Trygghet</a>
+        </nav>
+
+        <!-- Actions: Sök, Sparade, Mobilmeny -->
+        <div class="header-actions">
+          <button class="search-trigger-btn" aria-label="Sök på sajten">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span>Sök</span>
+            <kbd>⌘K</kbd>
+          </button>
+
+          <button id="savedTriggerBtn" class="saved-trigger-btn" aria-label="Mina sparade guider">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            <span id="savedCounterBadge" class="saved-counter" style="display: none;">0</span>
+          </button>
+
+          <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Öppna meny" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBIL DRAWER -->
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link active">Startsida</a>
+      <a href="livskunskap.html" class="mobile-drawer-link">Livskunskap & Vardag</a>
+      <a href="halsa.html" class="mobile-drawer-link">Hälsa & Träning</a>
+      <a href="tech-framtid.html" class="mobile-drawer-link">AI & Framtidens Tech</a>
+      <a href="skapa-starta.html" class="mobile-drawer-link">Skapa & Starta</a>
+      <a href="verktyg.html" class="mobile-drawer-link">Interaktiva Verktyg</a>
+      <a href="artiklar.html" class="mobile-drawer-link">Artiklar & Guider</a>
+      <a href="stod-trygghet.html" class="mobile-drawer-link" style="color: #ef4444;">Stöd & Trygghet</a>
+      <a href="om-oss.html" class="mobile-drawer-link">Om UNG MAN</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 12px;">Behöver du hjälp direkt?</div>
+      <a href="tel:116111" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 10px;">Ring BRIS (116 111)</a>
+      <button class="quick-exit-btn" style="width: 100%; justify-content: center; padding: 10px;">Lämna sidan snabbt</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- 3. HERO SEKTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Content -->
+          <div class="hero-content">
+            <div class="hero-badge-row">
+              <span class="hero-tag">Svensk plattform för 15–18 år</span>
+              <span class="badge badge-cobalt">100% oberoende & gratis</span>
+            </div>
+            <h1 class="hero-title">
+              Du behöver inte ha <span class="highlight">alla svar.</span>
+            </h1>
+            <p class="hero-description">
+              Livet mellan 15 och 18 är fullt av val, krav och förväntningar. UNG MAN är platsen där du lär dig det skolan glömde: hantera vardagen, bygga sunda vanor, förstå din ekonomi, använda ny teknik och skapa din egen väg.
+            </p>
+            <div class="hero-actions">
+              <a href="verktyg.html#livshjulet" class="btn btn-primary btn-lg">
+                <span>Gör Livskollen (3 min)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <a href="#pelare" class="btn btn-secondary btn-lg">
+                <span>Utforska guiderna</span>
+              </a>
+            </div>
+            <div class="hero-trust-bar">
+              <div class="hero-trust-avatars">
+                <img src="assets/images/friendship-talk.jpg" alt="Användare" class="avatar-mini">
+                <img src="assets/images/tech-student.jpg" alt="Användare" class="avatar-mini">
+                <img src="assets/images/health-training.jpg" alt="Användare" class="avatar-mini">
+              </div>
+              <div>
+                <strong>Inga pekpinnar.</strong> Bara konkreta verktyg, ärliga samtal och praktisk kunskap.
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image & Ambient Card -->
+          <div class="hero-media-wrap">
+            <div class="hero-main-card">
+              <img src="assets/images/hero-friends.jpg" alt="Unga män som umgås på en svensk gata i Stockholm" width="700" height="525" fetchpriority="high">
+            </div>
+            <div class="hero-floating-quote">
+              <div class="quote-chip-text">
+                ”Det känns som att alla andra har en plan, men när man pratar med folk fattar man att nästan ingen har det.”
+              </div>
+              <span class="quote-chip-author">Elias, 17 år – Naturvetenskapliga programmet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DAGENS TANKE STRIP -->
+    <div class="container">
+      <div class="daily-thought-box">
+        <div class="thought-content">
+          <div class="thought-label">Dagens perspektiv</div>
+          <p id="dailyThoughtText" class="thought-text">
+            "Du jämför ofta ditt eget vardagskaos med andras höjdpunkter på sociala medier. Ingen visar sina tvivel i sitt flöde."
+          </p>
+        </div>
+        <button id="refreshThoughtBtn" class="thought-action-btn" title="Klicka för ny tanke">
+          Ny tanke ↻
+        </button>
+      </div>
+    </div>
+
+    <!-- 5. DE FEM HUVUDPELARNA -->
+    <section id="pelare" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow">Grundpelarna</div>
+          <h2 class="section-title">Allt du behöver för att växa och forma din egen framtid</h2>
+          <p class="section-subtitle">
+            Fem sammanhängande områden som ger dig praktiska färdigheter, trygghet och mod att testa idéer.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Pelare 1: Livskunskap -->
+          <div class="pillar-card livskunskap">
+            <div class="pillar-icon-box">🧭</div>
+            <div class="pillar-number">01 / LIVSKUNSKAP</div>
+            <h3 class="pillar-title">Vardag, Relationer & Självkänsla</h3>
+            <p class="pillar-desc">
+              Hur du hanterar stress, sätter sunda gränser mot kompisar och lär dig vuxenlivets grunder – från första hyreskontraktet till att hantera pengar.
+            </p>
+            <ul class="pillar-topics-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Ekonomi, CSN & första lönen
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Självkänsla utan fasader
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Vänskap och relationer
+              </li>
+            </ul>
+            <a href="livskunskap.html" class="pillar-link">
+              Läs mer om livskunskap
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Pelare 2: Hälsa & Träning -->
+          <div class="pillar-card halsa">
+            <div class="pillar-icon-box">⚡</div>
+            <div class="pillar-number">02 / HÄLSA & TRÄNING</div>
+            <h3 class="pillar-title">Fysisk Styrka & Mentalt Mående</h3>
+            <p class="pillar-desc">
+              Träning utan toxisk hets, sömnens superkrafter och hur du tar hand om huvudet när prestationsångesten och kraven hopar sig.
+            </p>
+            <ul class="pillar-topics-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Styrketräning & basövningar
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Sömn & skärmtid som fungerar
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hantera prestationsångest
+              </li>
+            </ul>
+            <a href="halsa.html" class="pillar-link">
+              Läs om hälsa & träning
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Pelare 3: Tech & AI -->
+          <div class="pillar-card tech">
+            <div class="pillar-icon-box">🤖</div>
+            <div class="pillar-number">03 / TECH & FRAMTID</div>
+            <h3 class="pillar-title">AI, Kod & Framtidens Verktyg</h3>
+            <p class="pillar-desc">
+              Sluta vara en passiv konsument. Lär dig använda artificiell intelligens för skolarbete, börja koda dina egna projekt och förstå framtidens arbetsmarknad.
+            </p>
+            <ul class="pillar-topics-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                AI som privatlärare i plugget
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Koda ditt allra första projekt
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Framtidens jobb 2026–2030
+              </li>
+            </ul>
+            <a href="tech-framtid.html" class="pillar-link">
+              Upptäck tech & AI
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Pelare 4: Skapa & Starta -->
+          <div class="pillar-card skapa">
+            <div class="pillar-icon-box">💡</div>
+            <div class="pillar-number">04 / SKAPA & STARTA</div>
+            <h3 class="pillar-title">UF-företag, Kreativitet & Projekt</h3>
+            <p class="pillar-desc">
+              Ta dina idéer från anteckningsblocket till verkligheten. Guider för gymnasiet UF-företagande, musikproduktion, portfolio och entreprenörskap.
+            </p>
+            <ul class="pillar-topics-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                UF-guide: Från idé till försäljning
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Bygg din portfolio & kreativa projekt
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hur du förhandlar och tar betalt
+              </li>
+            </ul>
+            <a href="skapa-starta.html" class="pillar-link">
+              Lär dig skapa & bygga
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Pelare 5: Verktygslådan -->
+          <div class="pillar-card verktyg">
+            <div class="pillar-icon-box">🛠️</div>
+            <div class="pillar-number">05 / VERKTYGSLÅDAN</div>
+            <h3 class="pillar-title">Interaktiva Kalkylatorer & Klockor</h3>
+            <p class="pillar-desc">
+              Smarta digitala hjälpmedel du kan använda direkt i webbläsaren: Livshjulet för balans, CSN/ungdomsbudget och Pomodoro-fokusklocka.
+            </p>
+            <ul class="pillar-topics-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Livshjulet: Visuell livskoll
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Budgetkalkylator för 18-åringen
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Studie- & Pomodorotimer
+              </li>
+            </ul>
+            <a href="verktyg.html" class="pillar-link">
+              Öppna verktygen
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Pelare 6: Trygghet & Stöd -->
+          <div class="pillar-card livskunskap" style="border-left: 4px solid #ef4444;">
+            <div class="pillar-icon-box" style="background: #fef2f2; color: #ef4444;">❤️</div>
+            <div class="pillar-number" style="color: #ef4444;">TRYGGHET & HJÄLP</div>
+            <h3 class="pillar-title">Stödorganisationer & Samtal</h3>
+            <p class="pillar-desc">
+              När det är tungt och ingen i närheten förstår. Direktlänkar till kostnadsfritt, anonymt samtalsstöd dygnet runt.
+            </p>
+            <ul class="pillar-topics-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                BRIS telefon & chatt (116 111)
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                UMO & Ungdomsmottagningen
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Killar.se – Chatta anonymt
+              </li>
+            </ul>
+            <a href="stod-trygghet.html" class="pillar-link" style="color: #ef4444;">
+              Hitta stöd och hjälp
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. INTERAKTIV TEASER: LIVSKOLLEN -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="livskollen-teaser-card">
+          <div class="teaser-inner">
+            <div>
+              <div class="eyebrow eyebrow-dark">Självkoll</div>
+              <h2 class="teaser-heading">Hur ligger du till just nu? Testa Livskollen.</h2>
+              <p class="teaser-text">
+                Att stanna upp i 3 minuter och reflektera över skolan, sömnen, vännerna och stressen kan ge dig klarhet i vad du egentligen behöver fokusera på i veckan. Inga betyg, inga rätt eller fel.
+              </p>
+              <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="verktyg.html#livshjulet" class="btn btn-primary btn-lg">
+                  Öppna det fulla Livshjulet
+                </a>
+                <a href="om-oss.html" class="btn btn-outline-white btn-lg">
+                  Läs om vår vision
+                </a>
+              </div>
+            </div>
+
+            <!-- Snabbfråga / Interaktiv widget -->
+            <div class="quick-quiz-preview">
+              <div class="quiz-step-title">Snabbkoll: Hur känns din energinivå den här veckan?</div>
+              <div class="quiz-options-group">
+                <label class="quiz-option-label">
+                  <input type="radio" name="quickEnergy" value="high" onclick="handleQuickTeaser('Bra! Utnyttja energin till att ta tag i ett projekt du skjutit upp.')">
+                  <span>Full fart – jag känner mig taggad</span>
+                </label>
+                <label class="quiz-option-label">
+                  <input type="radio" name="quickEnergy" value="medium" onclick="handleQuickTeaser('Helt normalt. Prioritera 8 timmars sömn så håller du jämn nivå.')">
+                  <span>Helt okej – rullar på i vanlig takt</span>
+                </label>
+                <label class="quiz-option-label">
+                  <input type="radio" name="quickEnergy" value="tired" onclick="handleQuickTeaser('Viktigt: Tillåt dig att vila utan dåligt samvete. Skrolla mindre, sov mer.')">
+                  <span>Trött – känns som för mycket prov & krav</span>
+                </label>
+              </div>
+              <div id="quickTeaserResult" style="margin-top: 16px; font-size: 0.9rem; color: #f8fafc; font-weight: 500; min-height: 24px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. POPULÄRA GUIDER & ARTIKLAR -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <div class="eyebrow">Kunskapsbanken</div>
+            <h2 class="section-title">Populära guider just nu</h2>
+            <p class="section-subtitle">Konkreta artiklar skrivna med respekt och praktisk nytta i fokus.</p>
+          </div>
+          <a href="artiklar.html" class="btn btn-secondary">Visa alla artiklar (8 st) →</a>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="filter-bar" id="homeArticleFilters">
+          <button class="filter-btn active" data-filter="all">Alla ämnen</button>
+          <button class="filter-btn" data-filter="livskunskap">Livskunskap</button>
+          <button class="filter-btn" data-filter="halsa">Hälsa & Träning</button>
+          <button class="filter-btn" data-filter="tech">Tech & AI</button>
+          <button class="filter-btn" data-filter="skapa">Skapa & Starta</button>
+        </div>
+
+        <!-- Article Grid -->
+        <div class="grid grid-3" id="homeArticlesContainer">
+          <!-- Card 1 -->
+          <article class="card" data-category="livskunskap">
+            <div class="card-img-wrap">
+              <span class="card-img-badge badge badge-terracotta">Livskunskap</span>
+              <button class="card-bookmark-btn" data-article-id="konsten-att-inte-stressa-gymnasiet" onclick="toggleArticleBookmark('konsten-att-inte-stressa-gymnasiet')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <img src="assets/images/tech-student.jpg" alt="Student i bibliotek" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span>5 min läsning</span>
+                <span>•</span>
+                <span>Oktober 2026</span>
+              </div>
+              <h3 class="card-title">
+                <a href="artikel-detalj.html">Konsten att inte stressa sönder gymnasiet: 5 strategier</a>
+              </h3>
+              <p class="card-excerpt">
+                Betygspress och förväntningar. Så behåller du lugnet, pluggar smartare och räddar både sömnen och fritiden.
+              </p>
+              <div class="card-footer">
+                <a href="artikel-detalj.html">Läs guiden</a>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" data-category="halsa">
+            <div class="card-img-wrap">
+              <span class="card-img-badge badge badge-emerald">Hälsa & Träning</span>
+              <button class="card-bookmark-btn" data-article-id="styrketraning-utan-skitsnack" onclick="toggleArticleBookmark('styrketraning-utan-skitsnack')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <img src="assets/images/health-training.jpg" alt="Träning i stadspark" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span>6 min läsning</span>
+                <span>•</span>
+                <span>Oktober 2026</span>
+              </div>
+              <h3 class="card-title">
+                <a href="halsa.html#gym-guide">Styrketräning för nybörjare: Grunderna utan myter</a>
+              </h3>
+              <p class="card-excerpt">
+                Glöm dyra kosttillskott och extrema scheman. Här är de 4 basövningarna och hur du bygger långsiktig styrka.
+              </p>
+              <div class="card-footer">
+                <a href="halsa.html#gym-guide">Läs guiden</a>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" data-category="tech">
+            <div class="card-img-wrap">
+              <span class="card-img-badge badge badge-cobalt">Tech & AI</span>
+              <button class="card-bookmark-btn" data-article-id="ai-som-privatlarare-skolan" onclick="toggleArticleBookmark('ai-som-privatlarare-skolan')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <img src="assets/images/creators-studio.jpg" alt="Tech och skapande" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span>7 min läsning</span>
+                <span>•</span>
+                <span>Oktober 2026</span>
+              </div>
+              <h3 class="card-title">
+                <a href="tech-framtid.html#ai-studier">AI som din personliga privatlärare (utan att fuska)</a>
+              </h3>
+              <p class="card-excerpt">
+                Lär dig prompta för att förstå matte, bolla idéer för uppsatser och öva inför prov med AI som sparringpartner.
+              </p>
+              <div class="card-footer">
+                <a href="tech-framtid.html#ai-studier">Läs guiden</a>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. VERKLIGA RÖSTER / INTERVJUER -->
+    <section class="section section-subtle">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow">Verkliga röster</div>
+          <h2 class="section-title">Erfarenheter från killar som varit där</h2>
+          <p class="section-subtitle">Inga polerade fasader eller skryt. Bara ärliga berättelser om val, tvivel och framgångar.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Voice 1 -->
+          <div class="voice-card">
+            <img src="assets/images/friendship-talk.jpg" alt="Samtal på utsiktsplats" class="voice-img-top">
+            <div class="voice-body">
+              <div class="voice-quote">
+                Jag bytte gymnasielinje efter ettan för att jag insåg att jag valt för mina föräldrars skull. Det kändes läskigt då, men det var det bästa beslut jag tagit.
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px;">
+                Felix berättar om modet att erkänna att man valt fel väg, hur rektorn hjälpte till med bytet och varför det inte var ett år bortkastat.
+              </p>
+              <div class="voice-author-row">
+                <div>
+                  <div class="voice-author-name">Felix Lindqvist, 18 år</div>
+                  <div class="voice-author-role">Bytte från Teknik till Samhällsvetenskap, Uppsala</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Voice 2 -->
+          <div class="voice-card">
+            <img src="assets/images/creators-studio.jpg" alt="Kreatörer i studio" class="voice-img-top">
+            <div class="voice-body">
+              <div class="voice-quote">
+                Vi trodde UF-företag bara handlade om tråkiga blanketter. När vi sålde vår första egentillverkade produkt till en okänd kund fattade vi att man faktiskt kan skapa saker på riktigt.
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px;">
+                Liam och Noah startade ett lokalt designmärke på gymnasiet i Göteborg och delar med sig av vad de lärde sig om pengar, ansvar och samarbete.
+              </p>
+              <div class="voice-author-row">
+                <div>
+                  <div class="voice-author-name">Liam & Noah, 17 år</div>
+                  <div class="voice-author-role">Grundare av Urban Craft UF, Göteborg</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. NYHETSBREV & MÅNADSINSIGHT -->
+    <section class="section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="eyebrow">Månadsbrevet</div>
+          <h2 class="newsletter-title">Ingen spam. Bara handfasta tips.</h2>
+          <p class="newsletter-text">
+            Få de bästa guiderna, studieknepen, boktipsen och verktygen levererade till din inkorg en gång i månaden. Helt kostnadsfritt.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Tack för att du prenumererar! Välkommen ombord.'); this.reset();">
+            <input type="email" class="newsletter-input" placeholder="Din e-postadress..." required aria-label="E-postadress">
+            <button type="submit" class="btn btn-primary">Börja prenumerera</button>
+          </form>
+          <div class="newsletter-note">
+            Vi delar aldrig din e-post med tredje part. Du kan avsluta när du vill med ett klick.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-symbol">UM</div>
+            <div class="brand-text">
+              <span class="brand-name">UNG MAN</span>
+              <span class="brand-tagline">Du behöver inte ha alla svar</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Sveriges moderna digitala plattform för unga män mellan 15 och 18 år. Vi stöttar självständighet, lärande, välmående och framtidsdrömmar utan fördomar eller pekpinnar.
+          </p>
+          <div class="footer-helpline-box">
+            <h5>Mår du dåligt just nu?</h5>
+            <p>Du är aldrig ensam. Ring <a href="tel:116111" style="color: #fff; text-decoration: underline;">BRIS på 116 111</a> eller chatta gratis på <a href="https://killar.se" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline;">killar.se</a>.</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Pelare -->
+        <div>
+          <h4 class="footer-col-title">Områden</h4>
+          <ul class="footer-links">
+            <li><a href="livskunskap.html" class="footer-link">Livskunskap & Vardag</a></li>
+            <li><a href="halsa.html" class="footer-link">Hälsa & Träning</a></li>
+            <li><a href="tech-framtid.html" class="footer-link">AI & Framtidens Tech</a></li>
+            <li><a href="skapa-starta.html" class="footer-link">Skapa & Starta</a></li>
+            <li><a href="verktyg.html" class="footer-link">Interaktiva Verktyg</a></li>
+            <li><a href="artiklar.html" class="footer-link">Artiklar & Guider</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Verktyg -->
+        <div>
+          <h4 class="footer-col-title">Verktyg</h4>
+          <ul class="footer-links">
+            <li><a href="verktyg.html#livshjulet" class="footer-link">Livshjulet (Självkoll)</a></li>
+            <li><a href="verktyg.html#budget-kalkylator" class="footer-link">Budgetkalkylator 15–18 år</a></li>
+            <li><a href="verktyg.html#fokusklocka" class="footer-link">Pomodoro Fokusklocka</a></li>
+            <li><a href="livskunskap.html#checklista" class="footer-link">Vuxenlivets Checklista</a></li>
+            <li><a href="tech-framtid.html#prompter" class="footer-link">AI-Promptbibliotek</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Om & Stöd -->
+        <div>
+          <h4 class="footer-col-title">Om & Trygghet</h4>
+          <ul class="footer-links">
+            <li><a href="stod-trygghet.html" class="footer-link" style="color: #f87171; font-weight: 600;">Akut Stöd & Krislinjer</a></li>
+            <li><a href="om-oss.html" class="footer-link">Om UNG MAN & Vision</a></li>
+            <li><a href="om-oss.html#redaktionellt" class="footer-link">Redaktionella Principer</a></li>
+            <li><a href="om-oss.html#foraldrar" class="footer-link">För Föräldrar & Lärare</a></li>
+            <li><a href="om-oss.html#kontakt" class="footer-link">Kontakta Redaktionen</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 UNG MAN (UNGMAN.SE). Alla rättigheter förbehållna. Byggd med omtanke i Sverige.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="om-oss.html#integritet">Integritetspolicy</a>
+          <a href="om-oss.html#cookies">Kakor (Cookies)</a>
+          <a href="stod-trygghet.html">Säkerhet</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SÖK MODAL -->
+  <div id="searchModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Sök dialog">
+    <div class="search-dialog">
+      <div class="search-input-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Sök artiklar, ämnen, verktyg..." autocomplete="off">
+        <button id="searchCloseBtn" class="search-close-btn" aria-label="Stäng sök">&times;</button>
+      </div>
+      <div id="searchResultsArea" class="search-results-area"></div>
+    </div>
+  </div>
+
+  <!-- SPARADE GUIDER DRAWER -->
+  <div id="savedDrawer" class="saved-drawer" role="dialog" aria-modal="true">
+    <div class="saved-drawer-header">
+      <h3 style="font-size: 1.25rem;">Mina sparade guider</h3>
+      <button id="savedCloseBtn" class="search-close-btn" aria-label="Stäng sparade">&times;</button>
+    </div>
+    <div id="savedDrawerBody" class="saved-drawer-body"></div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleQuickTeaser(message) {
+      const res = document.getElementById('quickTeaserResult');
+      res.textContent = message;
+    }
+
+    // Filter functionality on homepage
+    const filterBtns = document.querySelectorAll('#homeArticleFilters .filter-btn');
+    const cards = document.querySelectorAll('#homeArticlesContainer .card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
